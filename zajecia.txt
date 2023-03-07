@@ -8,6 +8,13 @@ https://www.apachefriends.org/pl/index.html
 https://gitforwindows.org/
 
 git clone repo.git
+git status
+git add *
+git status
+git commit
+
+i, <insert>, <esc>, :wq
+
 
 
 
