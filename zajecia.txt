@@ -1,0 +1,13 @@
+http://localhost:8040/dashboard/phpinfo.php
+Loaded Configuration File	C:\xampp\php\php.ini
+upload_max_filesize	40M	40M
+
+_SERVER['DOCUMENT_ROOT']	C:/xampp/htdocs
+
+https://www.apachefriends.org/pl/index.html
+https://gitforwindows.org/
+
+git clone repo.git
+
+
+
