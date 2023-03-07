@@ -15,15 +15,9 @@ git commit
 
 i, <insert>, <esc>, :wq
 
-<<<<<<<<< Temporary merge branch 1
-=========
 git commit -m "modified file"
 git push origin main
 
 git config --global user.name "username"
 git config --global user.email "johndoe@example.com"
 git push origin main
->>>>>>>>> Temporary merge branch 2
-
-
-
