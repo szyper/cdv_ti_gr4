@@ -21,3 +21,6 @@ git push origin main
 git config --global user.name "username"
 git config --global user.email "johndoe@example.com"
 git push origin main
+
+
+http://localhost:8040/git/studia/cdv/cdv_ti_gr4/1_podstawy.php
