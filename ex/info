@@ -1,0 +1,8 @@
+1) Nowa tabela panstwa
+2) Klucz obcy dodany do tabeli województwo
+3) Indeks dodany do FK
+4) Relacja pomiedzy tabelami (widok projektu)
+5) Modyfikacja kwerendy
+
+Dodać rekordy do tabeli Państwa
+! Wartość 0 w kluczu obcym
