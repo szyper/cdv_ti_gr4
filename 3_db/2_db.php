@@ -10,6 +10,16 @@
 </head>
 <body>
 	<h4>Użytkownicy</h4>
+  <?php
+    if (isset($_GET["infoDeleteUser"])){
+	    if ($_GET["infoDeleteUser"] == 0){
+		    echo "<h4>Nie udało się usunąć użytkownika!</h4>";
+	    }else{
+		    echo "<h4>Prawidłowo usunięto użytkownika!</h4>";
+	    }
+    }
+
+  ?>
   <table>
     <tr>
       <th>Imię</th>
@@ -22,10 +32,16 @@
 
   <?php
     require_once "../scripts/connect.php";
-    $sql = "select * from users u JOIN cities c on c.id = u.city_id JOIN states s on s.id = c.state_id JOIN countries c2 on s.country_id = c2.id;";
+    $sql = "select u.id userId, u.firstName, u.lastName, u.birthday, c.city, s.state, c2.country from users u JOIN cities c on c.id = u.city_id JOIN states s on s.id = c.state_id JOIN countries c2 on s.country_id = c2.id;";
     $result = $conn->query($sql);
-    while($user = $result->fetch_assoc()){
-      echo <<< TABLEUSERS
+    //echo $result->num_rows;
+
+  //tr, td, colspan
+    if ($result->num_rows == 0){
+      echo "<tr><td colspan='6'>Brak rekordów do wyświetlenia</td></tr>";
+    }else{
+	    while($user = $result->fetch_assoc()){
+		    echo <<< TABLEUSERS
         <tr>
           <td>$user[firstName]</td>
           <td>$user[lastName]</td>
@@ -33,10 +49,13 @@
           <td>$user[city]</td>
           <td>$user[state]</td>
           <td>$user[country]</td>
+          <td><a href="../scripts/delete_user.php?userDeleteId=$user[userId]">Usuń</a></td>
         </tr>
 TABLEUSERS;
+	    }
     }
     echo "</table>";
   ?>
+
 </body>
 </html>
