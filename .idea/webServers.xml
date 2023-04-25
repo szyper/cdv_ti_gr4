@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="862ad43b-08dd-48cd-80c7-db6136d281d2" name="php_server_cdv_gr_4" url="http://localhost/git/cdv/cdv_ti_gr4">
+        <fileTransfer accessType="LOCAL" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
