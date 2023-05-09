@@ -70,7 +70,15 @@ TABLEUSERS;
           <input type="text" name="firstName" placeholder="Podaj imię"><br><br>
           <input type="text" name="lastName" placeholder="Podaj nazwisko"><br><br>
           <input type="date" name="birthday"> Data urodzenia<br><br>
-          <input type="number" name="city_id" placeholder="Podaj id miasta"><br><br>
+          <select name="city_id">
+      ADDUSERFORM;
+          $sql = "SELECT * FROM cities";
+          $result = $conn->query($sql);
+          while($city = $result->fetch_assoc()){
+            echo "<option value='$city[id]'>$city[city]</option>";
+          }
+	    echo <<<ADDUSERFORM
+          </select><br><br>
           <input type="submit" value="Dodaj użytkownika">
         </form>
 ADDUSERFORM;
