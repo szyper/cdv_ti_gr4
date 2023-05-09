@@ -89,12 +89,13 @@ ADDUSERFORM;
 
 // aktualizacja użytkownika
   if (isset($_GET["userUpdateId"])){
+	  $_SESSION["userUpdateId"] = $_GET["userUpdateId"];
     $sql = "SELECT u.firstName, u.lastName, u.birthday, u.city_id FROM users u WHERE u.id=$_GET[userUpdateId]";
     $result = $conn->query($sql);
     $user = $result->fetch_assoc();
 	  echo <<<UPDATEUSERFORM
         <h4>Aktualiacja użytkownika</h4>
-        <form action="../scripts/add_user.php" method="post">
+        <form action="../scripts/update_user.php" method="post">
           <input type="text" name="firstName" value="$user[firstName]"><br><br>
           <input type="text" name="lastName" value="$user[lastName]"><br><br>
           <input type="date" name="birthday" value="$user[birthday]"> Data urodzenia<br><br>
