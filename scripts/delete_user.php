@@ -11,8 +11,8 @@
 //error lub ok, komunikat na stronie 2_db.php
 	if ($conn->affected_rows == 0){
 		//echo "error";
-		header("location: ../3_db/3_db_delete_add.php?infoDeleteUser=0");
+		header("location: ../3_db/4_db_delete_add_update.php?infoDeleteUser=0");
 	}else{
 		//echo "ok";
-		header("location: ../3_db/3_db_delete_add.php?infoDeleteUser=1");
+		header("location: ../3_db/4_db_delete_add_update.php?infoDeleteUser=1");
 	}

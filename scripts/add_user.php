@@ -20,4 +20,4 @@
 		$_SESSION["error"] = "Nie dodano użytkownika!";
 	}
 
-	header("location: ../3_db/3_db_delete_add.php");
+	header("location: ../3_db/4_db_delete_add_update.php");
