@@ -71,8 +71,9 @@ try{
 	}
 
 }catch(mysqli_sql_exception $e){
-	//echo "Błąd: ".$e->getMessage();
-	$_SESSION["error"] = "Adres email jest zarezerwowany!";
+	//$_SESSION["error"] = "Adres email jest zarezerwowany!";
+	$_SESSION["error"] = $e->getMessage();
+	
 	echo "<script>history.back();</script>";
 }
 
